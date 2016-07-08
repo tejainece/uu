@@ -9,7 +9,10 @@ func (meErr Err) Error() string {
 }
 
 const (
+	//ErrInvalidLineLen is invalid line length
 	ErrInvalidLineLen = Err("Invalid line length!")
+	//ErrInvalidDataLen is invalid data length
 	ErrInvalidDataLen = Err("Invalid data length!")
-	ErrInvalidData    = Err("Invalid data!")
+	//ErrInvalidData is invalid data
+	ErrInvalidData = Err("Invalid data!")
 )

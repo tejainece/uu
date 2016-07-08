@@ -18,7 +18,7 @@ const (
 	//PCharNewline is integer representation of newline character
 	PCharNewline = 0x0A
 
-	//PCharNewline is integer representation of carriage return character
+	//PCharCR is integer representation of carriage return character
 	PCharCR = 0x0D
 )
 
@@ -50,7 +50,7 @@ func EncodeLine(aBytes []byte) []byte {
 		return []byte{UUCharPseudoZero, PCharCR, PCharNewline}
 	}
 
-	lRet := make([]byte, 0)
+	var lRet []byte
 
 	lRet = append(lRet, byte(UUCharStart+len(aBytes)))
 
